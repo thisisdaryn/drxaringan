@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569256624238.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8B79FD41",
+    "lastKnownWriteTime" : 1569256162,
+    "last_content_update" : 1569256162,
+    "path" : "~/learning/rnorth-19/rnorth-19/Statistical_Inference.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "155,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

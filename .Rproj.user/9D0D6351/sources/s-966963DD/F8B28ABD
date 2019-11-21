@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569256553667.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F8B28ABD",
+    "lastKnownWriteTime" : 1569256584,
+    "last_content_update" : 1569256584954,
+    "path" : "~/teaching/drxaringan/inst/rmarkdown/templates/drxaringan/template.yaml",
+    "project_path" : "inst/rmarkdown/templates/drxaringan/template.yaml",
+    "properties" : {
+        "cursorPosition" : "4,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}

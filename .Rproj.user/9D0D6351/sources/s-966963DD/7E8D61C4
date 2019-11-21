@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569256598473.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7E8D61C4",
+    "lastKnownWriteTime" : 1569256812,
+    "last_content_update" : 1569256812870,
+    "path" : "~/teaching/drxaringan/inst/rmarkdown/templates/drxaringan/skeleton/skeleton.Rmd",
+    "project_path" : "inst/rmarkdown/templates/drxaringan/skeleton/skeleton.Rmd",
+    "properties" : {
+        "cursorPosition" : "4,36",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

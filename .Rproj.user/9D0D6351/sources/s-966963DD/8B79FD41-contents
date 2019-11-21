@@ -1,0 +1,155 @@
+---
+title: "Study Design"
+subtitle: "Daryn Ramsden"
+author: "thisisdaryn at gmail dot com"
+date: "last updated: `r Sys.Date()`"
+institution: ""
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    chakra: libs/remark.js
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(tidyverse)
+library(sf)
+library(r2d3)
+library(notitia)
+bars <- c(10, 20, 30)
+
+knitr::opts_chunk$set(fig.align="center", fig.width=5, fig.height=5, warning = FALSE, message = FALSE)
+```
+
+```{r xaringan-themer, include = FALSE}
+library(xaringanthemer)
+duo_accent(
+  primary_color = "ivory",
+  secondary_color = "#310A31",
+  header_font_google = google_font("Roboto", "400"),
+  text_font_google   = google_font("Lato", "300"),
+  code_font_family = "Fira Code",
+  code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css",
+  header_color = "#f54278",
+  title_slide_text_color = "#354a66"
+)
+```
+
+
+---
+## Statistical Inference
+
+Statistical Inference: 
+
+Goal: to estimate one or more parameters of the wider population 
+
+
+---
+### Hypothesis testing framework
+
+ * Null Hypothesis: status quo
+ * Alternative Hypothesis 
+
+
+---
+### Standard error
+
+**standard error**: a measure of the uncertainty in a parameter estimate
+--
+
+* Question: if one was to repeat the experiment with another sample of the same size, how much would the estimate differ?
+
+*
+
+
+---
+### Precision
+
+Precision of estimates is influenced by two factors:
+
+--
+
+  * the sample size
+
+--
+  
+  * the variability in the population of interest
+
+
+
+---
+
+```{r}
+df <- chi_emps[chi_emps$Department %in% c("POLICE", "FIRE") & chi_emps$SalHour == "Salary", ]
+table(df$Department)
+```
+```{r}
+set.seed(1729)
+pop_size <- dim(df)[1]
+
+
+sample1 <- df[sample(pop_size, 50, replace = FALSE), ]
+sample2 <- df[sample(pop_size, 50, replace = FALSE), ]
+```
+
+
+
+```{r}
+model1 <- lm(AnnualSalary ~ Department, data = sample1)
+model1 
+```
+
+
+```{r}
+summary(model1)
+```
+
+
+```{r}
+model2 <- lm(AnnualSalary ~ Department, data = sample2)
+summary(model2)
+```
+
+
+
+
+---
+### Residuals
+
+Residuals are the difference between the model-predicted values and observed values in the sample
+
+```{r}
+hist(model1$residuals, breaks = 30)
+```
+
+
+
+```{r}
+hist(model2$residuals, breaks = 30)
+```
+
+
+
+```{r}
+hist(df$AnnualSalary, breaks = 30)
+```
+
+---
+```{r}
+confint(model1)
+```
+
+
+---
+### 
+  * Confidence Interval includes zero
+
+  * p-value > 0.05 (for desired 95% confidence )
+
